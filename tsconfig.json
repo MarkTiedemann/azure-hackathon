@@ -1,0 +1,15 @@
+{
+  "include": ["./src/*.ts"],
+  "compilerOptions": {
+    "outDir": "out",
+    "lib": ["esnext"],
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": true
+  },
+  "typeAcquisition": {
+    "enable": true
+  }
+}

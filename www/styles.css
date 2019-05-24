@@ -1,0 +1,98 @@
+@font-face {
+  font-family: EONBrixSans;
+  src: url('font_regular.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: EONBrixSans;
+  src: url('font_medium.woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: EONBrixSans;
+  src: url('font_bold.woff');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  font-family: EONBrixSans;
+}
+
+header {
+  padding: 22px 22px 10px 13px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 18px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 16px 22px 17px 22px;
+  border-top: 1px solid #e8e8e8;
+  font-size: 14px;
+  background: white;
+}
+
+.ribbon {
+  position: absolute;
+  left: 0;
+}
+
+.ribbon.top {
+  top: 0;
+}
+
+.ribbon.bottom {
+  bottom: 0;
+}
+
+.logo.big {
+  height: 27px;
+  transform: translateY(-3px);
+}
+
+.logo.small {
+  height: 15px;
+  transform: translateY(1.5px);
+}
+
+.logo.right {
+  float: right;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger line {
+  stroke: black;
+  stroke-width: 8px;
+}
+
+.menu {
+  vertical-align: top;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.links {
+  float: right;
+}
+
+.links a {
+  margin-left: 10px;
+  color: #111;
+  text-decoration: none;
+}
