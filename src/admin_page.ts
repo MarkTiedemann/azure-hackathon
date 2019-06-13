@@ -56,19 +56,47 @@ export function renderAdminPage(ratings: Rating[]): string {
         <link href="styles.css" rel="stylesheet" />
         <style>
           header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            width: 100%;
+            height: 68px;
             padding: 18px 14px 18px 14px;
           }
 
+          header svg {
+            width: 86px;
+            transform: none !important;
+          }
+
           header h2 {
+            display: inline;
             margin: 0;
+            text-align: center;
+            padding-left: calc(50% - 200px);
           }
 
           header span {
+            float: right;
+            line-height: 32px;
             font-weight: 500;
+          }
+
+          header button {
+            float: right;
+            font-size: 17px;
+            margin: 0;
+            margin-left: 10px;
+            background-color: #ea1b0a;
+            color: white;
+            border: 0;
+            border-radius: 9px;
+            padding: 3px 15px 5px 15px;
+            line-height: 24px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+          }
+
+          header button:hover {
+            background-color: #cc1407;
           }
 
           main {
@@ -159,7 +187,7 @@ export function renderAdminPage(ratings: Rating[]): string {
             />
           </svg>
           <h2>Admin Dashboard</h2>
-          <span>Logged in as admin.</span>
+          <span>Logged in as admin. <button id="logout">Logout</button></span>
         </header>
 
         <main>
@@ -242,6 +270,30 @@ export function renderAdminPage(ratings: Rating[]): string {
           <path fill="#e3e000" d="m 1305,0 135,0 0,6 -135,0 z"></path>
           <path fill="#ea1b0a" d="m 1440,0 480,0 0,6 -480,0 z"></path>
         </svg>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let logoutButton = document.querySelector('#logout')
+            logoutButton.addEventListener('click', function() {
+              logout()
+            })
+            logoutButton.addEventListener('keyup', function(event) {
+              if (event.key == 'Enter') {
+                logout()
+              }
+            })
+          })
+          function logout() {
+            let request = new XMLHttpRequest()
+            // Logout by sending a request with invalid credentials
+            request.open('GET', '/admin', true, 'invalid_username', 'invalid_password')
+            request.send()
+            request.addEventListener('loadend', function() {
+              // Once logged out, go back to homepage
+              location = '/'
+            })
+          }
+        </script>
       </body>
     </html>
   `

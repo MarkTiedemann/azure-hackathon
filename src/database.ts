@@ -8,6 +8,7 @@ let ratings: Rating[]
 export async function connectDatabase(): Promise<void> {
   ratings = [
     /* Bogus ratings to pre-fill admin dashboard. */
+    /*
     { email: '0@example.org', stars: 5 },
     { email: '1@example.org', stars: 5 },
     { email: '2@example.org', stars: 5 },
@@ -35,6 +36,7 @@ export async function connectDatabase(): Promise<void> {
     { email: '24@example.org', stars: 1 },
     { email: '25@example.org', stars: 1 },
     { email: '26@example.org', stars: 1 }
+    */
   ]
 }
 

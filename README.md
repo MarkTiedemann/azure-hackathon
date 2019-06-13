@@ -25,7 +25,7 @@
 - Create a Dockerfile for the app. Build a Docker image. Push the image into an Azure Container Registry.
 - Create a Kubernetes.yaml file which declares a service and a deployment. Continuously deploy the app into the Kubernetes cluster.
 - Run a load test using [`autocannon`](https://github.com/mcollina/autocannon) on your local machine. Run a load test for the deployed app using Azure DevOps Load Tests.
-- Extract some functionality of the app into a seperate NPM package. Publish the NPM package to Azure DevOps Artifacts. Import the package into the app.
+- Extract some functionality of the app into a separate NPM package. Publish the NPM package to Azure DevOps Artifacts. Import the package into the app.
 
 ## Development
 
